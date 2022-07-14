@@ -26,14 +26,15 @@
 
 
 <!-- Lingkup -->
-
 ## Scope
 
-Karakteristik `var`: functional scope, bisa deklarasi tanpa inisialisasi nilai, bisa di-update dan bisa re-declare
+##### Karakteristik:
 
-Karakteristik `let`: block scope, bisa deklarasi tanpa inisialisasi nilai, bisa di-update tapi gak bisa re-declare
-
-Karakteristik `const`: block scope, gak bisa deklarasi tanpa inisialisasi nilai, gak bisa di-update dan di-redeclare
+| `var`                                       | `let`                                       | `const`                                          |
+|---------------------------------------------|---------------------------------------------|--------------------------------------------------|
+| functional scope                            | block scope                                 | block scope                                      |
+| bisa deklarasi tanpa <br/>inisialisasi nilai| bisa deklarasi tanpa <br/>inisialisasi nilai| gak bisa deklarasi tanpa<br/> inisialisasi nilai |
+| bisa di-update dan bisa redeclare           | bisa di-update tapi gak bisa redeclare      | gak bisa di-update dan di-redeclare              |
 
 ```js
 function varFn() {
@@ -50,7 +51,7 @@ let a = 99
 function letFn() {
   if (true) {
     let b = 9
-    console.log(b) // bakalan ngeprint objek b yang ada di lingkup blok
+    console.log(b) // bakalan ngeprint objek b yang ada di lingkup if
   }
   console.log(b) // gak bisa diakses karena deklarasi di lingkup if
 }
@@ -64,7 +65,7 @@ const a = 99
 function constFn() {
   if (true) {
     const b = 9
-    console.log(b) // bakalan ngeprint objek b yang ada di lingkup blok
+    console.log(b) // bakalan ngeprint objek b yang ada di lingkup if
   }
   console.log(b) // gak bisa diakses karena deklarasi di lingkup if
 }
@@ -91,7 +92,6 @@ const cc = 'bb' // ga bisa re-declare
 
 
 <!-- Mutasi -->
-
 ## Object Mutation
 
 developer sekarang demen make `const`, kecuali kalo emang butuh banget buat re-declare objek mereka make `let`
@@ -130,7 +130,6 @@ console.log(obj) // { name: 'John Doe', age: 99 }
 
 
 <!-- Fungsi Panah -->
-
 ## Arrow Function
 
 fungsi gak bernama? pake fungsi arrow/panah
@@ -156,19 +155,19 @@ const myFunc = () => {
 const myFunc = () => "value";
 
 
-// pake parameter v1
+// pake parameter vesi body
 const multiplierFn = (val, multi) => {
   const result = val * multi
   return result
 }
 
 
-// pake parameter v2
+// pake parameter versi inline-body
 const multiplierFn = (val, multi) => val * multi
 
 
 // pake default parameter
-const incrementFn = (number, value = 1) => number += value;
+const incrementFn = (number, value = 1) => number += value
 console.log(increment(1, 2)) // 3
 console.log(increment(1)) // 2, karena default value = 1
 
@@ -193,7 +192,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Bondo Pangaji - [bondopangaji@gmail.com](mailto:bondopangaji@gmail.com)
 
-Project Link: [https://github.com/bondopangaji/es6-cheatsheet](https://github.com/bondopangaji/es6-cheatsheet)
+Project Link: [https://github.com/bondopangaji/id-es6-cheatsheet](https://github.com/bondopangaji/id-es6-cheatsheet)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
