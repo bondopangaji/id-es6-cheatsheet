@@ -18,6 +18,7 @@
       <li><a href="#scope">Scope</a></li>
       <li><a href="#object-mutation">Object Mutation</a></li>
       <li><a href="#arrow-function">Arrow Function</a></li>
+      <li><a href="#rest-parameters">Rest Parameters</a></li>
       <li><a href="#license">License</a></li>
       <li><a href="#contact">Contact</a></li>
   </ol>
@@ -138,21 +139,21 @@ lambda function gak sih? roughly the same thing!
 
 ```js
 // fungsi b aja
-const myFunc = function () {
+const myFn = function () {
   const myVar = "value"
   return myVar
 }
 
 
 // fungsi arrow
-const myFunc = () => {
+const myFn = () => {
   const myVar = "value"
   return myVar
 }
 
 
 // kalau cuma butuh return value, bisa lebih simpel lagi
-const myFunc = () => "value";
+const myFn = () => "value";
 
 
 // pake parameter vesi body
@@ -174,6 +175,37 @@ console.log(increment(1)) // 2, karena default value = 1
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- Parameter Rest -->
+
+## Rest Parameters
+
+parameternya nyimpen banyak argumen/value
+
+cara kerjanya gmn? si rest parameter ini nyimpen argumen/value tsb ke dalam array
+
+wise man said, _"array adalah koentji"_
+
+```js
+function howManyArgs(...args) { // rest params: ...args
+  return args.length;
+}
+console.log(howManyArgs(0, 1, 2)); // 3
+console.log(howManyArgs("str", null, [1, 2, 3], { })); // 4
+
+
+const sumArgs = (...args) => {
+  // make array reducer buat ngejumlahin item di dalem args (init val = 0)
+  return args.reduce((prev, curr) => prev + curr, 0);
+}
+console.log(sumArgs()) // 0
+console.log(sumArgs(1, 2, 3)) // 5
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- LICENSE -->
