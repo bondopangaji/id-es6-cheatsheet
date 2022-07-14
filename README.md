@@ -19,6 +19,7 @@
       <li><a href="#object-mutation">Object Mutation</a></li>
       <li><a href="#arrow-function">Arrow Function</a></li>
       <li><a href="#rest-parameters">Rest Parameters</a></li>
+      <li><a href="#spread-operator">Spread Operator</a></li>
       <li><a href="#license">License</a></li>
       <li><a href="#contact">Contact</a></li>
   </ol>
@@ -184,7 +185,7 @@ console.log(increment(1)) // 2, karena default value = 1
 
 parameternya nyimpen banyak argumen/value
 
-cara kerjanya gmn? si rest parameter ini nyimpen argumen/value tsb ke dalam array
+cara kerjanya gmn? si rest parameter ini nyimpen args/values tsb ke dalam array
 
 wise man said, _"array adalah koentji"_
 
@@ -202,6 +203,29 @@ const sumArgs = (...args) => {
 }
 console.log(sumArgs()) // 0
 console.log(sumArgs(1, 2, 3)) // 5
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- Spread Operator -->
+
+## Spread Operator
+
+kebalikan dari rest params, yaitu ngeluarin/unload args/values dari sebuah array
+
+```js
+const arr = [1, 2, 3, 4];
+const maxVal = Math.max(...arr); // maxVal bakalan punya value 4
+
+
+const arr1 = ['SATU', 'DUA', 'TIGA', 'EMPAT'];
+let arr2;
+arr2 = [...arr1];  // assign value di arr1 ke arr2
+console.log(arr2); // ['SATU', 'DUA', 'TIGA', 'EMPAT']
+
+
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
