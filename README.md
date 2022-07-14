@@ -94,7 +94,7 @@ const cc = 'bb' // ga bisa re-declare
 <!-- Mutasi -->
 ## Object Mutation
 
-developer sekarang demen make `const`, kecuali kalo emang butuh banget buat re-declare objek mereka make `let`
+developer sekarang demen make `const`, kecuali kalo emang butuh banget buat update value mereka make `let`
 
 ```js
 // mutasi objek array
